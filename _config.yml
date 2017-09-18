@@ -1,17 +1,17 @@
 # Hexo Configuration
 
 # Site
-title: Jun Gu
-subtitle: Android Developer
+title: Jun Gu's Blog
+subtitle:
 description: This is my personal blog
 author: Jun Gu
-language: zh
+language: en
 timezone: Asia/Shanghai
 
 # URL
 url: http://2dxgujun.com/
 root: /
-permalink: :year/:month/:day/:title/
+permalink: :year-:month-:day/:title/
 permalink_defaults:
 
 # Directory
@@ -60,21 +60,13 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: very-simple
-
-very_simple:
-  menu:
-    Home: /
-    Archives: archives
-    About: about
-  social:
-    email: 2dxgujun@gmail.com
-    github: 2dxgujun
-    rss: /atom.xml
-  fancybox: true
-  disqus: 2dxgujun
+theme: hueman
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type:
+  type: rsync
+  host: s1.natapp.cc
+  user: 2dxgujun
+  root: ~/2dxgujun.com
+  port: 62333
